@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+.unico:hover::first-line{
+    color: red;
+}
+
+h2:hover::selection{
+    color: green;
+}
+
+div{
+    display: flex;
+}
+
+.div__text--negrita{
+    color: red;
+}

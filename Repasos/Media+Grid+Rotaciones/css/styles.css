@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+#text{
+    grid-area: text;
+    align-content: center; /* Sirve para centrar verticalmente texto*/
+    text-align: end; /* Sirve para centrar horizontalmente texto*/
+}
+
+@media (min-width: 0px) and (max-width: 850px) {
+    #container{
+        background-color: rgb(229, 255, 113);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "text"
+        "text"
+        "text"
+         ;
+    }
+    #text{
+        background-color: rgb(255, 36, 36);
+    }
+    #text2{
+        grid-area: text2;
+        display: none;
+    }
+
+    #text3{
+        grid-area: text3;
+        display: none;
+    }
+}
+@media (min-width: 851px) {
+    #container{
+        background-image: linear-gradient(to right, purple,cyan);
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+    "text"
+    "text2"
+    "text3"
+    ;
+    }
+    
+    #text{
+        background-color: rgb(28, 118, 138);
+    }
+
+    #text2{
+        grid-area: text2;
+    }
+    
+    #text2:hover{
+        transition: 2s;
+        /*
+        Rotaciones:
+        transform: rotate(20deg);
+        transform: rotateZ(20deg);
+        transform: rotateX(20deg);
+        transform: rotateY(20deg);
+
+
+        Movimientos en 3 Dimensiones:
+        transform: skew(20deg, 40deg);
+        transform: skewX(20deg);
+        transform: skewY(20deg);
+        transform: scale(2, 2); Para aumentar la escala del div.
+
+        */
+    }
+
+    #text3{
+        grid-area: text3;
+    }
+}

@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+}
+
+#container{
+    background-color: red;
+    display: flex;
+    flex-flow: row;
+}
+
+#d1{
+    flex-grow: 1; /*Apartir del valor entre mas grande sea mas ocupa dentro de los demas elementos del flex*/
+    flex-basis: 10px; /* El tamaño minimo que puede tener el elemento */
+    background-color: aquamarine;
+}
+
+#d2{
+    flex-grow: 2;
+    background-color: blueviolet;
+}
+
+#d3{
+    flex-grow: 3;
+    background-color: azure;
+}
+
+#d4{
+    flex-grow: 4;
+    background-color: coral;
+}

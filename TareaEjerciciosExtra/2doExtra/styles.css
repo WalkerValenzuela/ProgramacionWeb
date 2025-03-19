@@ -111,8 +111,8 @@ footer{
 
     #dos{
         display: grid;
-        grid-template-columns: repeat(3,ifr);
-        grid-template-rows: repeat(3,ifr);
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
         grid-template-areas:
         "dostexto dostexto dostexto"
         "dos1 dos2 dos3"
