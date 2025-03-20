@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    /*align-content: center;  Sirve para centrar verticalmente texto*/
+    /*text-align: end; Sirve para centrar horizontalmente texto*/
+       /*
+        Rotaciones:
+        transform: rotate(20deg);
+        transform: rotateZ(20deg);
+        transform: rotateX(20deg);
+        transform: rotateY(20deg);
+
+
+        Movimientos en 3 Dimensiones:
+        transform: skew(20deg, 40deg);
+        transform: skewX(20deg);
+        transform: skewY(20deg);
+        transform: scale(2, 2); Para aumentar la escala del div.
+
+        */
+
+.bnormal{
+    transition: 2s;
+    background-color: rgb(30, 149, 179);
+    width: 200px;
+    height: 50px;
+
+}
+
+.bnormal:hover{
+    transition: 2s;
+    background-color: blueviolet;
+}
+
+#botones{
+    margin: 10px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textpanel{
+    width: 95vw;
+    height: 20vh;
+    background-color: gray;
+    border: solid black;
+    border-radius: 10px;
+    
+}
+
+#panel{
+    text-align: center;
+}
+
+#opciones{
+    display: grid;
+    width: 100vw;
+    height: 350px;
+    margin-top: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:    
+    "opTitulos inputNombre inputNombre inputNombre inputNombre"
+    "opTitulos inputEdad inputEdad inputEdad inputEdad"
+    "opTitulos inputPeso inputPeso inputPeso inputPeso"
+    ;
+}
+
+#opTitulos{
+    grid-area: opTitulos;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#inputNombre{
+    grid-area: inputNombre;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+#inputEdad{
+    grid-area: inputEdad;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}
+
+#inputPeso{
+    grid-area: inputPeso;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+}

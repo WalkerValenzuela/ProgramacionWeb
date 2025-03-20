@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center; 
+    align-content: center;
+    background-color: thistle;
+    padding: 10px;
+}
+
+.estiloBoton{
+    transition: 2s;
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(0, 194, 224);
+    border: solid black 2px;
+    border-radius: 10px;
+}
+
+.estiloBoton:hover{
+    transition: 2s;
+    border-radius: 20px;
+    background-color: rgb(0, 157, 175);
+}
+
+#principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    background-color: bisque;
+    height: 50vh;
+}
+
+#textoBuscador{
+    font-size: 1.3rem;
+}
+
+#textoPrincipal{
+    width: 60vw;
+}
+
+#gridContenido{
+    display: grid;
+    background-color: rgb(255, 192, 97);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+    "Cont1 Cont2 Cont3 Cont4"
+    ;
+}
+
+.cajagrid{
+    border: solid black 2px;
+    padding: 15px;
+}
+
+#Cont1{
+    grid-area: Cont1;
+}
+#Cont2{
+    grid-area: Cont2;
+}
+#Cont3{
+    grid-area: Cont3;
+}
+#Cont4{
+    grid-area: Cont4;
+}
+
+#gridCatalogo{
+    background-color: cadetblue;
+}
+
+#cata{
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+    align-items: center;
+    padding: 10px;
+    border: solid black 1px;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+#textCata{
+    width: 55%;
+}
+
+#imgCata{
+    height: 50%;
+    width: 30%;
+    background-color: gainsboro;
+}
+
+@media (min-width: 550px) and (max-width: 850px) {
+    header{
+        background-color: greenyellow;
+    }
+
+    #gridContenido{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "Cont1 Cont2"
+        "Cont3 Cont4"
+        ;
+    }
+
+    #imgCata{
+        margin-top: 150px;
+    }
+
+}
+
+
+@media (min-width: 0px) and (max-width: 549px){
+    header{
+        background-color: blue;
+    }
+
+    #gridContenido{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: 
+        "Cont1"
+        "Cont2"
+        "Cont3"
+        "Cont4"
+        ;
+    }
+
+    #Cont1, #Cont2, #Cont3, #Cont4{
+        text-align: center;
+    }   
+
+    #cata{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 75vh;
+        padding: 10px;
+        border: solid black 1px;
+    }
+    
+    #textCata{
+        width: 100%;
+        margin-bottom: 15px ;
+    }
+    
+    #imgCata{
+        height: 100%;
+        width: 100%;
+        background-color: gainsboro;
+    }
+}
+
+footer{
+    height: 30vh;
+    background-color: cornflowerblue;
+    text-align: center;
+    align-content: center;
+}
+
+.btn-left {
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    background-color: #a55b00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-right {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    background-color: #6d9c00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-left:hover, .btn-right:hover {
+    opacity: 0.8;
+}
