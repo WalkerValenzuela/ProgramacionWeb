@@ -1,0 +1,18 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#principal{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+#pagination{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
