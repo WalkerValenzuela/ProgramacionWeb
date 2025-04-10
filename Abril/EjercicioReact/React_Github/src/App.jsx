@@ -15,12 +15,13 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('https://api.github.com/users')
-      .then(response => response.json())
-      .then(data => {
-        setAvatares(data);
-      })
-  }, [])
+  fetch('https://api.github.com/users')
+    .then(response => response.json())
+    .then(data => {
+      setAvatares(data);
+    });
+}, []);
+
 
   return (
     <>
@@ -33,6 +34,11 @@ function App() {
               name={item.login}
               image={item.avatar_url}
               url={item.html_url}
+              urlseguidores={item.followers_url}
+              type={item.type}
+              subscriptions_url={item.subscriptions_url}
+              repos_url={item.repos_url}
+              organizations_url={item.organizations_url}
             />
           );
         })}

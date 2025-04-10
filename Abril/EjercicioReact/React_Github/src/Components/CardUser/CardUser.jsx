@@ -10,6 +10,8 @@ import Collapse from '@mui/material/Collapse';
 import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { styled } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
+
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -42,9 +44,8 @@ const CardUser = (props) => {
           {props.name}
         </Typography>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica.
-          <Button id="Boton" variant="contained" href={props.url} target="_blank">Acceder GitHub</Button>
+        Seguidores: <a href={props.urlseguidores} target="_blank" rel="noopener noreferrer">{props.urlseguidores}</a>
+        <Button id="Boton" variant="contained" href={props.url} target="_blank">Acceder GitHub</Button>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -59,12 +60,22 @@ const CardUser = (props) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>More Info:</Typography>
+          <Typography paragraph>Mas Informacion:</Typography>
           <Typography paragraph>
-            These reptiles vary in size and behavior, ranging from tiny chameleons to large monitor lizards. Some species can detach their tails to escape predators.
-          </Typography>
-          <Typography paragraph>
-            Many lizards are active during the day, relying on external heat sources to regulate body temperature.
+          <Stack direction="column" spacing={1}>
+  <Typography variant="body2">
+    Tipo De Usuario: <a id="adicional" href={props.type} target="_blank" rel="noopener noreferrer">{props.type}</a>
+  </Typography>
+  <Typography variant="body2">
+<a id="adicional" href={props.subscriptions_url} target="_blank" rel="noopener noreferrer">{props.subscriptions_url}</a>
+  </Typography>
+  <Typography variant="body2">
+ <a id="adicional" href={props.repos_url} target="_blank" rel="noopener noreferrer">{props.repos_url}</a>
+  </Typography>
+  <Typography variant="body2">
+              <a id="adicional" href={props.organizations_url} target="_blank" rel="noopener noreferrer">{props.organizations_url}</a>
+              </Typography>
+             </Stack>
           </Typography>
         </CardContent>
       </Collapse>
