@@ -6,7 +6,6 @@ const Male = () => {
   const [characters, setCharacters] = useState([]);
   const [visibleCount, setVisibleCount] = useState(8);
   const hasMore = visibleCount < characters.length;
-
   const fetchAllMaleCharacters = async () => {
     let allMales = [];
     let currentPage = 1;
@@ -38,9 +37,8 @@ const Male = () => {
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
       const fullHeight = document.body.offsetHeight;
-
       if (scrollTop + windowHeight >= fullHeight - 100) {
-        setVisibleCount((prev) => prev + 8); // cargar 8 personajes más
+        setVisibleCount((prev) => prev + 8);
       }
     };
 
@@ -51,7 +49,6 @@ const Male = () => {
   return (
     <div className="male-page-container">
       <h1 className="Title">Personajes Masculinos</h1>
-
       <div className="male-character-grid">
         {characters.slice(0, visibleCount).map((char, index) => (
           <div
@@ -63,12 +60,11 @@ const Male = () => {
           </div>
         ))}
       </div>
-
       {hasMore ? (
-        <p className="loading-indicator">- Sigue Bajando Para Más -</p>
+        <p className="loading-indicator">Sigue Bajando Para Más...</p>
       ) : (
         characters.length > 0 && (
-          <p className="loading-indicator">- Todos los personajes son visibles. -</p>
+          <p className="loading-indicator">Todos los personajes son visibles.</p>
         )
       )}
     </div>

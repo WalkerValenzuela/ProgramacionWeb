@@ -45,7 +45,7 @@ footer{
     border-width: 0px 0px thin;
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.12);
-    width: 400px;
+    min-width: 400px;
     background-color: white;
 }
 
@@ -65,14 +65,6 @@ footer{
     width: 10px;
     background-color: green;
     margin-left: 5px;
-}
-
-a {
-    background-color: transparent;
-    text-decoration: none;
-    color: gray;
-    font-size: 16px;
-    font-weight: 500;
 }
 
 .Promocion{
@@ -130,4 +122,11 @@ a {
     padding-bottom: 4px;
     border-bottom: 2px solid rgb(156, 39, 176);
     text-decoration: none;
+}
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: gray;
+    font-size: 16px;
+    font-weight: 500;
 }

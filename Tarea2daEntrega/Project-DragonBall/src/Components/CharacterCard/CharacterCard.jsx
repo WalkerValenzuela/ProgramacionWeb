@@ -32,7 +32,6 @@ const CharacterCard = ({ character }) => {
         <p className='Orange'><strong>{character.maxKi}</strong></p>
         <p><strong>Afiliación:</strong></p>
         <p className='Orange'><strong>{character.affiliation}</strong></p>
-
       </div>
     </div>
   );

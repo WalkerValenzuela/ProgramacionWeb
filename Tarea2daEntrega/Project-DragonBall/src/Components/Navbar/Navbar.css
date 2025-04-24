@@ -20,39 +20,39 @@
 }
 
 #iconLogo{
-    width: 60px;
-    height: 60px;
-    background-color: white;
-    margin-left: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  margin-left: 10px;
 }
 
 #botonAcerca {
-    background-color: #fbc02d;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    font-size: 0.875rem;
-    line-height:  1.75;
-    letter-spacing: 0.02857em;
-    margin-right: 10px;
-  }
+  background-color: #fbc02d;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.875rem;
+  line-height:  1.75;
+  letter-spacing: 0.02857em;
+  margin-right: 10px;
+}
   
-  #botonAcerca:hover {
-    background-color: #f9a825;
-  }
+#botonAcerca:hover {
+  background-color: #f9a825;
+}
   
 
 .navbar-title {
-    height: 60px;
+  height: 60px;
 }
 .navbar-links{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 15px;
 }
 
 .navbar-link {

@@ -5,7 +5,6 @@ import './CharacterDetail.css';
 const CharacterDetail = () => {
   const { id } = useParams();
   const [character, setCharacter] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCharacter = async () => {
@@ -15,15 +14,12 @@ const CharacterDetail = () => {
         setCharacter(data);
       } catch (err) {
         console.error('Error al cargar detalle:', err);
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchCharacter();
   }, [id]);
 
-  if (loading) return <div className="loading">Cargando...</div>;
   if (!character) return <div className="not-found">Personaje no encontrado</div>;
 
   const { name, image, race, gender, ki, maxKi, affiliation, description, originPlanet, transformations } = character;
@@ -33,11 +29,11 @@ const CharacterDetail = () => {
       <h1 className="detail-name">{name}</h1>
 
       <div className="detail-details">
-      <div className="detail-card">
-        <img src={image} alt={name} className="detail-image" />
-      </div>
+        <div className="detail-card">
+          <img src={image} alt={name} className="detail-image" />
+        </div>
 
-      <div className="detail-info">
+        <div className="detail-info">
           <p className='infoBasic'><strong className='subtitle'>Raza:</strong> {race}</p>
           <p className='infoBasic'><strong className='subtitle'>Género:</strong> {gender}</p>
           <p className='infoBasic'><strong className='subtitle'>Ki:</strong> {ki}</p>
@@ -51,7 +47,7 @@ const CharacterDetail = () => {
         <p>{description}</p>
       </div>
 
-      {originPlanet && (  
+      {originPlanet && (
         <div className="planet-section">
           <h2>Planeta de Origen: {originPlanet.name}</h2>
           <p className={`planet-status ${originPlanet.isDestroyed ? 'destroyed' : 'alive'}`}>
@@ -60,7 +56,10 @@ const CharacterDetail = () => {
           <div className="planet-content">
             <img src={originPlanet.image} alt={originPlanet.name} className="planet-image" />
           </div>
-          <div><h2 className='planet-titule'>Descripción del Planeta: </h2><p className="planet-description">{originPlanet.description}</p></div>
+          <div>
+            <h2 className='planet-titule'>Descripción del Planeta: </h2>
+            <p className="planet-description">{originPlanet.description}</p>
+          </div>
         </div>
       )}
 

@@ -10,27 +10,27 @@
   }
   
 @media (min-width: 0px) {
-    .female-character-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .female-character-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
+}
 
   
 @media (min-width: 600px) {
   .female-character-grid {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 900px) {
   .female-character-grid {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 1200px) {
   .female-character-grid {
-      grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -49,13 +49,13 @@
 
 @media (min-width: 0px) {
   .Title {
-      font-size: 21px;
+    font-size: 21px;
   }
 }
 
 @media (min-width: 600px) {
   .Title {
-      font-size: 40px;
+    font-size: 40px;
   }
 }
 
@@ -77,7 +77,7 @@
 }
 
 .female-page-container{
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 @media (max-width: 475px) {

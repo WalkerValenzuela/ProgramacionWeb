@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Container } from '@mui/material';
 import CharacterCard from '../../Components/CharacterCard/CharacterCard';
-import './Home.css';
 import homeLogo from '../../Images/homeLogo.webp';
+import './Home.css';
 
 const Home = () => {
   const [characters, setCharacters] = useState([]);
@@ -39,7 +39,7 @@ const Home = () => {
       const fullHeight = document.body.offsetHeight;
 
       if (scrollTop + windowHeight >= fullHeight - 100) {
-        setVisibleCount((prev) => prev + 8); // cargar 8 personajes más
+        setVisibleCount((prev) => prev + 8);
       }
     };
 
@@ -65,13 +65,12 @@ const Home = () => {
         ))}
       </div>
       {hasMore ? (
-  <p className="loading-indicator"> - Sigue Bajando Para Más - </p>
+  <p className="loading-indicator">Sigue Bajando Para Más...</p>
 ) : (
   characters.length > 0 && (
-    <p className="loading-indicator">- Todos los personajes son visibles. -</p>
+    <p className="loading-indicator">Todos los personajes son visibles.</p>
   )
 )}
-
     </Container>
   );
 };

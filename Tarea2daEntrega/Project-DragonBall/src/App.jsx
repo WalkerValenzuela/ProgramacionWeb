@@ -6,8 +6,8 @@ import Male from './Pages/MalePage/Male';
 import Female from './Pages/FemalePage/Female';
 import About from './Pages/AboutPage/About';
 import CharacterDetail from './Pages/CharacterDetailPage/CharacterDetail';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Footer from './Components/Footer/Footer';
-
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
         <Route path="/femenino" element={<Female />} />
         <Route path="/acerca" element={<About />} />
         <Route path="/personaje/:id" element={<CharacterDetail />} />
+        <Route path="*" element={<ErrorPage />}/>
       </Routes>
       <Footer />
     </Router>

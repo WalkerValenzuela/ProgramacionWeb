@@ -40,7 +40,7 @@ const Female = () => {
       const fullHeight = document.body.offsetHeight;
 
       if (scrollTop + windowHeight >= fullHeight - 100) {
-        setVisibleCount((prev) => prev + 8); // cargar 8 personajes más
+        setVisibleCount((prev) => prev + 8);
       }
     };
 
@@ -65,10 +65,10 @@ const Female = () => {
       </div>
       
       {hasMore ? (
-        <p className="loading-indicator">- Sigue Bajando Para Más -</p>
+        <p className="loading-indicator">Sigue Bajando Para Más...</p>
       ) : (
         characters.length > 0 && (
-          <p className="loading-indicator">- Todos los personajes son visibles. -</p>
+          <p className="loading-indicator">Todos los personajes son visibles.</p>
         )
       )}
     </div>
